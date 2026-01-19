@@ -1,0 +1,39 @@
+{
+    "Type": "NoiseRange",
+    "Biomes": [
+        {
+            "Biome": "Wasteland",
+            "Min": -1.0,
+            "Max": 0.0
+        },
+        {
+            "Biome": "Nothing",
+            "Min": 0.0,
+            "Max": 1.0
+        }
+    ],
+    "DefaultBiome": "Nothing",
+    "DefaultTransitionDistance": 32,
+    "MaxBiomeEdgeDistance": 0,
+    "Density": {
+        "Type": "Imported",
+        "Name": "SingleBiomeMap"
+    },
+    "ContentFields": [
+        {
+            "Type": "BaseHeight",
+            "Name": "Base",
+            "Y": 100
+        },
+        {
+            "Type": "BaseHeight",
+            "Name": "Water",
+            "Y": 100
+        },
+        {
+            "Type": "BaseHeight",
+            "Name": "Bedrock",
+            "Y": 0
+        }
+    ]
+}
