@@ -2,7 +2,7 @@
     "Type": "NoiseRange",
     "Biomes": [
         {
-            "Biome": "Wasteland",
+            "Biome": "Grassland",
             "Min": -1.0,
             "Max": 0.0
         },
