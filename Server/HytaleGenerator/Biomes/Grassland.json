@@ -1,0 +1,200 @@
+{
+	"$NodeId":	"Biome-a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d",
+	"Name":	"Grassland",
+	"Terrain":	{
+		"$NodeId":	"Terrain-2d3e4f5a-6b7c-4d8e-9f0a-1b2c3d4e5f6a",
+		"Type":	"DAOTerrain",
+		"Density":	{
+			"$NodeId":	"SumDensityNode-3e4f5a6b-7c8d-4e9f-0a1b-2c3d4e5f6a7b",
+			"Type":	"Sum",
+			"Skip":	false,
+			"Inputs":	[{
+					"$NodeId":	"SimplexNoise2DDensityNode-4f5a6b7c-8d9e-4f0a-1b2c-3d4e5f6a7b8c",
+					"Type":	"SimplexNoise2D",
+					"Skip":	false,
+					"Lacunarity":	30,
+					"Persistence":	0.3,
+					"Octaves":	2,
+					"Scale":	200,
+					"Seed":	"B"
+				}, {
+					"$NodeId":	"CurveMapper.Density-5a6b7c8d-9e0f-4a1b-2c3d-4e5f6a7b8c9d",
+					"Type":	"CurveMapper",
+					"Skip":	false,
+					"Curve":	{
+						"$NodeId":	"ManualCurve-6b7c8d9e-0f1a-4b2c-3d4e-5f6a7b8c9d0e",
+						"Type":	"Manual",
+						"Points":	[{
+								"$NodeId":	"CurvePoint-7c8d9e0f-1a2b-4c3d-4e5f-6a7b8c9d0e1f",
+								"In":	0,
+								"Out":	0.5
+							}, {
+								"$NodeId":	"CurvePoint-8d9e0f1a-2b3c-4d4e-5f6a-7b8c9d0e1f2a",
+								"In":	40,
+								"Out":	-0.5
+							}]
+					},
+					"Inputs":	[{
+							"$NodeId":	"BaseHeight.Density-9e0f1a2b-3c4d-4e5f-6a7b-8c9d0e1f2a3b",
+							"Type":	"BaseHeight",
+							"Skip":	false,
+							"BaseHeightName":	"Base",
+							"Distance":	true
+						}]
+				}]
+		}
+	},
+	"MaterialProvider":	{
+		"$NodeId":	"SolidityMaterialProvider-0f1a2b3c-4d5e-4f6a-7b8c-9d0e1f2a3b4c",
+		"Type":	"Solidity",
+		"Solid":	{
+			"$NodeId":	"QueueMaterialProvider-1a2b3c4d-5e6f-4a7b-8c9d-0e1f2a3b4c5d",
+			"Type":	"Queue",
+			"Queue":	[{
+					"$NodeId":	"ConstantMaterialProvider-2b3c4d5e-6f7a-4b8c-9d0e-1f2a3b4c5d6e",
+					"Type":	"Constant",
+					"Material":	{
+						"$NodeId":	"Material-3c4d5e6f-7a8b-4c9d-0e1f-2a3b4c5d6e7f",
+						"Solid":	"Rock_Grass"
+					}
+				}]
+		},
+		"Empty":	{
+			"$NodeId":	"QueueMaterialProvider-4d5e6f7a-8b9c-4d0e-1f2a-3b4c5d6e7f8a",
+			"Type":	"Queue",
+			"Queue":	[{
+					"$NodeId":	"ConstantMaterialProvider-5e6f7a8b-9c0d-4e1f-2a3b-4c5d6e7f8a9b",
+					"$Comment":	"REQUIRED",
+					"Type":	"Constant",
+					"Material":	{
+						"$NodeId":	"Material-6f7a8b9c-0d1e-4f2a-3b4c-5d6e7f8a9b0c",
+						"Solid":	"None"
+					}
+				}]
+		}
+	},
+	"Props":	[],
+	"$NodeEditorMetadata":	{
+		"$Nodes":	{
+			"Biome-a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d":	{
+				"$Position":	{
+					"$x":	-4225,
+					"$y":	-4226
+				},
+				"$Title":	"[ROOT] Biome"
+			},
+			"Terrain-2d3e4f5a-6b7c-4d8e-9f0a-1b2c3d4e5f6a":	{
+				"$Position":	{
+					"$x":	-3366,
+					"$y":	-4882
+				}
+			},
+			"SumDensityNode-3e4f5a6b-7c8d-4e9f-0a1b-2c3d4e5f6a7b":	{
+				"$Position":	{
+					"$x":	-3011,
+					"$y":	-5279
+				}
+			},
+			"SimplexNoise2DDensityNode-4f5a6b7c-8d9e-4f0a-1b2c-3d4e5f6a7b8c":	{
+				"$Position":	{
+					"$x":	-2303,
+					"$y":	-5480
+				}
+			},
+			"CurveMapper.Density-5a6b7c8d-9e0f-4a1b-2c3d-4e5f6a7b8c9d":	{
+				"$Position":	{
+					"$x":	-2375,
+					"$y":	-5108
+				}
+			},
+			"ManualCurve-6b7c8d9e-0f1a-4b2c-3d4e-5f6a7b8c9d0e":	{
+				"$Position":	{
+					"$x":	-1756,
+					"$y":	-4874
+				}
+			},
+			"CurvePoint-7c8d9e0f-1a2b-4c3d-4e5f-6a7b8c9d0e1f":	{
+				"$Position":	{
+					"$x":	-1103,
+					"$y":	-5016
+				}
+			},
+			"CurvePoint-8d9e0f1a-2b3c-4d4e-5f6a-7b8c9d0e1f2a":	{
+				"$Position":	{
+					"$x":	-1096,
+					"$y":	-4864
+				}
+			},
+			"BaseHeight.Density-9e0f1a2b-3c4d-4e5f-6a7b-8c9d0e1f2a3b":	{
+				"$Position":	{
+					"$x":	-1739,
+					"$y":	-5120
+				}
+			},
+			"SolidityMaterialProvider-0f1a2b3c-4d5e-4f6a-7b8c-9d0e1f2a3b4c":	{
+				"$Position":	{
+					"$x":	-3413,
+					"$y":	-4098
+				}
+			},
+			"QueueMaterialProvider-1a2b3c4d-5e6f-4a7b-8c9d-0e1f2a3b4c5d":	{
+				"$Position":	{
+					"$x":	-2109,
+					"$y":	-4216
+				}
+			},
+			"ConstantMaterialProvider-2b3c4d5e-6f7a-4b8c-9d0e-1f2a3b4c5d6e":	{
+				"$Position":	{
+					"$x":	-1463,
+					"$y":	-4207
+				}
+			},
+			"Material-3c4d5e6f-7a8b-4c9d-0e1f-2a3b4c5d6e7f":	{
+				"$Position":	{
+					"$x":	-784,
+					"$y":	-4214
+				}
+			},
+			"QueueMaterialProvider-4d5e6f7a-8b9c-4d0e-1f2a-3b4c5d6e7f8a":	{
+				"$Position":	{
+					"$x":	-2453,
+					"$y":	-3526
+				}
+			},
+			"ConstantMaterialProvider-5e6f7a8b-9c0d-4e1f-2a3b-4c5d6e7f8a9b":	{
+				"$Position":	{
+					"$x":	-1703,
+					"$y":	-3531
+				}
+			},
+			"Material-6f7a8b9c-0d1e-4f2a-3b4c-5d6e7f8a9b0c":	{
+				"$Position":	{
+					"$x":	-957,
+					"$y":	-3532
+				}
+			}
+		},
+		"$FloatingNodes":	[],
+		"$Links":	{
+		},
+		"$Groups":	[{
+				"$Position":	{
+					"$x":	-3040,
+					"$y":	-5560.1875
+				},
+				"$width":	2362.3125,
+				"$height":	938.9375,
+				"$name":	"Base"
+			}, {
+				"$Position":	{
+					"$x":	-2326.4375,
+					"$y":	-4487.625
+				},
+				"$width":	2289.75,
+				"$height":	625.9375,
+				"$name":	"Solid Material"
+			}],
+		"$Comments":	[],
+		"$WorkspaceID":	"HytaleGenerator - Biome"
+	}
+}

@@ -1,0 +1,18 @@
+{
+  "Group": "BYND",
+  "Name": "WorldGenTest",
+  "Version": "1.0.0",
+  "Description": "Say. My. Name.",
+  "Authors": [
+    {
+      "Name": "AuthorName",
+      "Email": "example@example.com",
+      "Url": "https://your-url.com"
+    }
+  ],
+  "Website": "https://your-website.com",
+  "ServerVersion": "*",
+  "Dependencies": {},
+  "OptionalDependencies": {},
+  "DisabledByDefault": false
+}
