@@ -1,39 +1,39 @@
 {
-  "Type": "NoiseRange",
-  "Biomes": [
-    {
-      "Biome": "Basic",
-      "Min": -1,
-      "Max": -0.5
+    "Type": "NoiseRange",
+    "Biomes": [
+        {
+            "Biome": "Basic",
+            "Min": -1.0,
+            "Max": 0.0
+        },
+        {
+            "Biome": "Nothing",
+            "Min": 0.0,
+            "Max": 1.0
+        }
+    ],
+    "DefaultBiome": "Nothing",
+    "DefaultTransitionDistance": 32,
+    "MaxBiomeEdgeDistance": 0,
+    "Density": {
+        "Type": "Imported",
+        "Name": "SingleBiomeMap"
     },
-    {
-      "Biome": "Nothing",
-      "Min": -0.5,
-      "Max": 0
-    }
-  ],
-  "DefaultBiome": "Basic",
-  "DefaultTransitionDistance": 32,
-  "MaxBiomeEdgeDistance": 8,
-  "Density": {
-    "Type": "Imported",
-    "Name": "Biome-Map"
-  },
-  "ContentFields": [
-    {
-      "Type": "BaseHeight",
-      "Name": "Base",
-      "Y": 100
-    },
-    {
-      "Type": "BaseHeight",
-      "Name": "Water",
-      "Y": 100
-    },
-    {
-      "Type": "BaseHeight",
-      "Name": "Bedrock",
-      "Y": 0
-    }
-  ]
+    "ContentFields": [
+        {
+            "Type": "BaseHeight",
+            "Name": "Base",
+            "Y": 100
+        },
+        {
+            "Type": "BaseHeight",
+            "Name": "Water",
+            "Y": 100
+        },
+        {
+            "Type": "BaseHeight",
+            "Name": "Bedrock",
+            "Y": 0
+        }
+    ]
 }

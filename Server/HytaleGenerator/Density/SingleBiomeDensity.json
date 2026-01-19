@@ -1,0 +1,76 @@
+{
+	"$NodeId":	"Exported.Density-SingleBiomeRoot",
+	"Type":	"Exported",
+	"ExportAs":	"SingleBiomeMap",
+	"SingleInstance":	true,
+	"Skip":	false,
+	"Inputs":	[{
+			"$NodeId":	"Distance.Density-RadialDistance",
+			"Type":	"Distance",
+			"Skip":	false,
+			"Curve":	{
+				"$NodeId":	"ManualCurve-DistanceMapping",
+				"Type":	"Manual",
+				"Points":	[{
+						"$NodeId":	"CurvePoint-Center",
+						"In":	0,
+						"Out":	-1
+					}, {
+						"$NodeId":	"CurvePoint-Edge",
+						"In":	200,
+						"Out":	0
+					}, {
+						"$NodeId":	"CurvePoint-Far",
+						"In":	400,
+						"Out":	1
+					}]
+			}
+		}],
+	"$NodeEditorMetadata":	{
+		"$Nodes":	{
+			"Exported.Density-SingleBiomeRoot":	{
+				"$Position":	{
+					"$x":	0,
+					"$y":	0
+				},
+				"$Title":	"[ROOT] Exported Density"
+			},
+			"Distance.Density-RadialDistance":	{
+				"$Position":	{
+					"$x":	952,
+					"$y":	-201
+				}
+			},
+			"ManualCurve-DistanceMapping":	{
+				"$Position":	{
+					"$x":	1844,
+					"$y":	-422
+				}
+			},
+			"CurvePoint-Center":	{
+				"$Position":	{
+					"$x":	2738,
+					"$y":	-642
+				}
+			},
+			"CurvePoint-Edge":	{
+				"$Position":	{
+					"$x":	2738,
+					"$y":	-421
+				}
+			},
+			"CurvePoint-Far":	{
+				"$Position":	{
+					"$x":	2738,
+					"$y":	-201
+				}
+			}
+		},
+		"$FloatingNodes":	[],
+		"$Links":	{
+		},
+		"$Groups":	[],
+		"$Comments":	[],
+		"$WorkspaceID":	"HytaleGenerator - Density"
+	}
+}
