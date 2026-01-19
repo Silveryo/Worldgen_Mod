@@ -1,0 +1,58 @@
+{
+	"Type": "NoiseRange",
+	"Biomes": [
+		{
+			"Biome": "Nothing",
+			"Min": -1.0,
+			"Max": 0.0
+		},
+		{
+			"Biome": "Basic",
+			"Min": 0.0,
+			"Max": 1.0
+		}
+	],
+	"DefaultBiome": "Nothing",
+	"DefaultTransitionDistance": 32,
+	"MaxBiomeEdgeDistance": 0,
+	"Density": {
+		"Type": "CurveMapper",
+		"Curve": {
+			"Type": "Manual",
+			"Points": [
+				{
+					"In": 0,
+					"Out": 1.0
+				},
+				{
+					"In": 1536,
+					"Out": 1.0
+				},
+				{
+					"In": 1728,
+					"Out": 0.0
+				},
+				{
+					"In": 1920,
+					"Out": -1.0
+				},
+				{
+					"In": 2500,
+					"Out": -1.0
+				}
+			]
+		},
+		"Inputs": [
+			{
+				"Type": "Distance"
+			}
+		]
+	},
+	"ContentFields": [
+		{
+			"Type": "BaseHeight",
+			"Name": "Base",
+			"Y": 100.0
+		}
+	]
+}

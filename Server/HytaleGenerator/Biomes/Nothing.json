@@ -1,0 +1,42 @@
+{
+	"$NodeId":	"Biome-e4c3c3fb-547d-4325-9885-78e99e0adbf3",
+	"Name":	"Basic",
+	"MaterialProvider":	{
+		"$NodeId":	"ConstantMaterialProvider-a94be8a8-f200-4a54-804d-030f43fbc01b",
+		"Type":	"Constant",
+		"Material":	{
+			"$NodeId":	"Material-49b4c5d5-dc77-4785-b661-eb06bf778647",
+			"Solid":	"None"
+		}
+	},
+	"Props":	[],
+	"$NodeEditorMetadata":	{
+		"$Nodes":	{
+			"Biome-e4c3c3fb-547d-4325-9885-78e99e0adbf3":	{
+				"$Position":	{
+					"$x":	-4225,
+					"$y":	-4226
+				},
+				"$Title":	"[ROOT] Biome"
+			},
+			"Material-49b4c5d5-dc77-4785-b661-eb06bf778647":	{
+				"$Position":	{
+					"$x":	-2674,
+					"$y":	-4191
+				}
+			},
+			"ConstantMaterialProvider-a94be8a8-f200-4a54-804d-030f43fbc01b":	{
+				"$Position":	{
+					"$x":	-3407,
+					"$y":	-4180
+				}
+			}
+		},
+		"$FloatingNodes":	[],
+		"$Links":	{
+		},
+		"$Groups":	[],
+		"$Comments":	[],
+		"$WorkspaceID":	"HytaleGenerator - Biome"
+	}
+}

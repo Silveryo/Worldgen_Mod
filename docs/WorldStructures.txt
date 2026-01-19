@@ -1,0 +1,168 @@
+ Based on my analysis of the decompiled code, here's comprehensive documentation on WorldStructure JSON files:
+
+   WorldStructure JSON Documentation
+
+   How It Works
+
+   The engine provides a node editor that constructs biome configurations saved as JSON files. These are loaded by the asset system using WorldStructureAsset codec. The "Type" field specifies which implementation to use - "NoiseRange" maps to BasicWorldStructureAsset.
+
+   JSON Structure
+
+   Root Level Fields
+
+   Field                       │ Type    │ Required │ Default │ Description                                             
+   ----------------------------+---------+----------+---------+---------------------------------------------------------
+   `Type`                      │ String  │ Yes      │ -       │ Always `"NoiseRange"` - maps to BasicWorldStructureAsset
+   `Biomes`                    │ Array   │ Yes      │ -       │ Array of biome range definitions
+   `Density`                   │ Object  │ Yes      │ -       │ Defines noise function for biome selection
+   `DefaultBiome`              │ String  │ Yes      │ -       │ Fallback biome ID when no range matches
+   `DefaultTransitionDistance` │ Integer │ Yes      │ 32      │ Smoothing radius between biomes (must be > 0)
+   `MaxBiomeEdgeDistance`      │ Integer │ Yes      │ 0       │ Maximum distance to biome edge for edge effects (≥ 0)
+   `ContentFields`             │ Array   │ No       │ []      │ Height reference definitions for biomes
+
+   Biomes Array Elements
+
+   Each biome entry is a BiomeRangeAsset:
+
+   Field   │ Type   │ Required │ Default │ Description                         
+   --------+--------+----------+---------+-------------------------------------
+   `Biome` │ String │ Yes      │ -       │ Biome asset ID to reference
+   `Min`   │ Double │ Yes      │ -1.0    │ Minimum density value for this biome
+   `Max`   │ Double │ Yes      │ 1.0     │ Maximum density value for this biome
+
+   What Min/Max Mean: The density field generates a noise value at each position (typically -1.0 to 1.0). Biomes are selected based on which range [Min, Max] the noise value falls into.
+
+   Density Object
+
+   Defines the noise function. Common types:
+
+   Imported Density (Node Editor Export)
+
+   json
+     {
+       "Type": "Imported",
+       "Name": "Biome-Map"
+     }
+
+   References an exported noise node from the node editor.
+
+   Constant Density
+
+   json
+     {
+       "Type": "Constant",
+       "Value": 0.5
+     }
+
+   Simplex Noise 2D
+
+   json
+     {
+       "Type": "SimplexNoise2D",
+       "Seed": 123,
+       "Frequency": 0.01,
+       "Amplitude": 1.0,
+       "Octaves": 4,
+       "Persistence": 0.5,
+       "Lacunarity": 2.0
+     }
+
+   ContentFields Array
+
+   Defines named height references used by biomes:
+
+   BaseHeight ContentField
+
+   json
+     {
+       "Type": "BaseHeight",
+       "Name": "Base",
+       "Y": 100.0
+     }
+
+   Field  │ Type   │ Required │ Default │ Description                     
+   -------+--------+----------+---------+---------------------------------
+   `Type` │ String │ Yes      │ -       │ `"BaseHeight"`
+   `Name` │ String │ Yes      │ -       │ Reference name for biomes to use
+   `Y`    │ Double │ No       │ 0.0     │ Height value
+
+   Full Example: "Mystic Islands" Biome Configuration
+
+   json
+     {
+       "Type": "NoiseRange",
+       "Biomes": [
+         {
+           "Biome": "Deep_Ocean",
+           "Min": -1.0,
+           "Max": -0.6
+         },
+         {
+           "Biome": "Shallow_Ocean",
+           "Min": -0.6,
+           "Max": -0.2
+         },
+         {
+           "Biome": "Sandy_Beach",
+           "Min": -0.2,
+           "Max": 0.1
+         },
+         {
+           "Biome": "Mystic_Forest",
+           "Min": 0.1,
+           "Max": 0.5
+         },
+         {
+           "Biome": "Crystal_Mountains",
+           "Min": 0.5,
+           "Max": 1.0
+         }
+       ],
+       "DefaultBiome": "Mystic_Forest",
+       "DefaultTransitionDistance": 32,
+       "MaxBiomeEdgeDistance": 16,
+       "Density": {
+         "Type": "SimplexNoise2D",
+         "Seed": 42,
+         "Frequency": 0.005,
+         "Amplitude": 1.0,
+         "Octaves": 6,
+         "Persistence": 0.5,
+         "Lacunarity": 2.0
+       },
+       "ContentFields": [
+         {
+           "Type": "BaseHeight",
+           "Name": "Sea_Level",
+           "Y": 64.0
+         },
+         {
+           "Type": "BaseHeight",
+           "Name": "Mountain_Base",
+           "Y": 100.0
+         },
+         {
+           "Type": "BaseHeight",
+           "Name": "Clouds",
+           "Y": 200.0
+         }
+       ]
+     }
+
+   Key Processing Flow
+
+   1. Load: Asset system reads JSON, uses WorldStructureAsset.CODEC to parse
+   2. Type Resolution: "Type": "NoiseRange" → BasicWorldStructureAsset
+   3. BiomeMap Building: Creates SimpleBiomeMap with:
+     •  Density noise function for sampling
+     •  Biome ranges for mapping density → biome
+     •  Default biome for fallback
+     •  Transition radius for smoothing
+   4. Runtime: For each world position, sample density, select biome by range
+
+   All Possible Density Types (from AssetManager.java)
+
+   SimplexNoise2D, SimplexNoise3D, Offset, Sum, Sqrt, Pow, Multiplier, Amplitude, Clamp, SmoothClamp, Max, Min, Floor, Ceiling, SmoothMax, SmoothMin, SmoothFloor, SmoothCeiling, Constant, Abs, Inverter, AmplitudeConstant, OffsetConstant, Pipeline, Normalizer, Imported, PositionsCellNoise, Positions3D, CellNoise2D, CellNoise3D, Gradient, Scale, Slider, GradientWarp, VectorWarp, Rotator,
+   PositionsPinch, PositionsTwist, BaseHeight, CurveMapper, Anchor, Distance, Shell, Axis, Plane, Switch, SwitchState, Ellipsoid, Cube, Cuboid, Cylinder, CellWallDistance, FastGradientWarp, Mix, MultiMix, XValue, YValue, ZValue, XOverride, YOverride, ZOverride, Cache, Angle, Exported, Terrain, DistanceToBiomeEdge
+
+ Auto (High) - allow all commands  GLM-4.7 [Z.AI Coding Plan] [custom]

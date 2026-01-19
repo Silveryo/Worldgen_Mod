@@ -27,14 +27,10 @@
 						"Points":	[{
 								"$NodeId":	"CurvePoint-679580fc-28ed-4b38-8c54-7df777e38e4b",
 								"In":	0,
-								"Out":	-1
+								"Out":	1
 							}, {
 								"$NodeId":	"CurvePoint-e3858e9c-2180-4c5f-9ba6-d9978b7c366d",
 								"In":	60,
-								"Out":	1
-							}, {
-								"$NodeId":	"CurvePoint-6d431084-0c44-45d8-b759-367c1ae433b3",
-								"In":	100,
 								"Out":	-1
 							}]
 					},
@@ -119,20 +115,14 @@
 			},
 			"CurvePoint-679580fc-28ed-4b38-8c54-7df777e38e4b":	{
 				"$Position":	{
-					"$x":	-1091,
-					"$y":	-5160
+					"$x":	-1103,
+					"$y":	-5016
 				}
 			},
 			"CurvePoint-e3858e9c-2180-4c5f-9ba6-d9978b7c366d":	{
 				"$Position":	{
-					"$x":	-1088,
-					"$y":	-4980
-				}
-			},
-			"CurvePoint-6d431084-0c44-45d8-b759-367c1ae433b3":	{
-				"$Position":	{
-					"$x":	-1091,
-					"$y":	-4805
+					"$x":	-1096,
+					"$y":	-4864
 				}
 			},
 			"BaseHeight.Density-f28cd7da-b5a4-4d05-ad04-4ebe2a731b94":	{

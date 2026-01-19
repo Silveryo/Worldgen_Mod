@@ -4,17 +4,17 @@
     {
       "Biome": "Basic",
       "Min": -1,
-      "Max": 1
+      "Max": -0.5
     },
     {
-      "Biome": "Grassland",
-      "Min": -1,
-      "Max": 1
+      "Biome": "Nothing",
+      "Min": -0.5,
+      "Max": 0
     }
   ],
   "DefaultBiome": "Basic",
   "DefaultTransitionDistance": 32,
-  "MaxBiomeEdgeDistance": 32,
+  "MaxBiomeEdgeDistance": 8,
   "Density": {
     "Type": "Imported",
     "Name": "Biome-Map"
