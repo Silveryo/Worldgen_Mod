@@ -30,16 +30,16 @@
 								"Type":	"Manual",
 								"Points":	[{
 										"$NodeId":	"CurvePoint-822a9be8-2ca0-45f4-9864-30237eab54b7",
-										"In":	0,
-										"Out":	2
+										"In":	-30,
+										"Out":	-1
 									}, {
 										"$NodeId":	"CurvePoint-5b54b706-56f6-411d-ae49-b6bb627ff11e",
-										"In":	5,
+										"In":	0,
 										"Out":	-1
 									}, {
 										"$NodeId":	"CurvePoint-9d283fe8-5780-4130-8cb8-51a96c29f053",
-										"In":	50,
-										"Out":	-2
+										"In":	30,
+										"Out":	-10
 									}]
 							},
 							"Inputs":	[{
@@ -199,6 +199,12 @@
 					"$y":	-3783
 				}
 			},
+			"Constant.TintProvider-ef3d266d-7299-4c83-a8f6-005f805813d3":	{
+				"$Position":	{
+					"$x":	-3460,
+					"$y":	-3830
+				}
+			},
 			"Constant.EnvironmentProvider-f76b394b-658b-4f9f-86bb-7cc506d65ea4":	{
 				"$Position":	{
 					"$x":	0,
@@ -211,10 +217,22 @@
 					"$y":	0
 				}
 			},
-			"Constant.TintProvider-ef3d266d-7299-4c83-a8f6-005f805813d3":	{
+			"CurvePoint-eae2af43-d26b-457c-ac8b-80fc651d90db":	{
 				"$Position":	{
-					"$x":	-3460,
-					"$y":	-3830
+					"$x":	-11,
+					"$y":	-4541
+				}
+			},
+			"CurvePoint-b6128c3b-0acc-48b9-821a-442073848166":	{
+				"$Position":	{
+					"$x":	-11,
+					"$y":	-4320
+				}
+			},
+			"CurvePoint-f0d619c2-46a5-42a8-8500-bae3d27c6a52":	{
+				"$Position":	{
+					"$x":	-11,
+					"$y":	-4762
 				}
 			}
 		},
@@ -226,6 +244,18 @@
 				"$NodeId":	"Constant.TintProvider-61c9e6e6-9d9f-4df2-b1ba-7fc390b281bb",
 				"Type":	"Constant",
 				"Color":	"#5b9e28"
+			}, {
+				"$NodeId":	"CurvePoint-eae2af43-d26b-457c-ac8b-80fc651d90db",
+				"In":	0,
+				"Out":	1
+			}, {
+				"$NodeId":	"CurvePoint-b6128c3b-0acc-48b9-821a-442073848166",
+				"In":	30,
+				"Out":	-10
+			}, {
+				"$NodeId":	"CurvePoint-f0d619c2-46a5-42a8-8500-bae3d27c6a52",
+				"In":	-30,
+				"Out":	-1
 			}],
 		"$Links":	{
 		},

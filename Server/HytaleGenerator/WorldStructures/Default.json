@@ -10,14 +10,9 @@
       "Biome": "Void_Buffer",
       "Min": -0.075,
       "Max": 0
-    },
-    {
-      "Biome": "Nothing",
-      "Min": -2,
-      "Max": -0.1
     }
   ],
-  "DefaultBiome": "Nothing",
+  "DefaultBiome": "Void",
   "DefaultTransitionDistance": 16,
   "MaxBiomeEdgeDistance": 16,
   "Density": {
