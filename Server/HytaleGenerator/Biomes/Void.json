@@ -1,0 +1,75 @@
+{
+	"$NodeId":	"Biome-dd69428a-7ad3-4ca6-83e7-97db5f76608d",
+	"Name":	"Basic",
+	"Terrain":	{
+		"$NodeId":	"Terrain-cb8bcdfe-d156-4e7c-b957-1d7f1b719565",
+		"Type":	"DAOTerrain",
+		"Density":	{
+			"$NodeId":	"ConstantDensityNode-0f803191-a321-4ce0-9f4e-ecc4c0488376",
+			"Type":	"Constant",
+			"Skip":	false,
+			"Value":	0
+		}
+	},
+	"MaterialProvider":	{
+		"$NodeId":	"ConstantMaterialProvider-58ef2433-f671-4685-8c4e-4c2de15a6fd8",
+		"$Comment":	"REQUIRED",
+		"Type":	"Constant",
+		"Material":	{
+			"$NodeId":	"Material-c2018a77-a350-4e97-ad56-50f2073b1b92",
+			"Solid":	"Empty"
+		}
+	},
+	"TintProvider":	{
+		"$NodeId":	"Constant.TintProvider-52e0101a-b2a5-4bd4-9aed-640a417f04d5",
+		"Type":	"Constant",
+		"Color":	"#008000"
+	},
+	"$NodeEditorMetadata":	{
+		"$Nodes":	{
+			"Biome-dd69428a-7ad3-4ca6-83e7-97db5f76608d":	{
+				"$Position":	{
+					"$x":	-4228,
+					"$y":	-4226
+				},
+				"$Title":	"[ROOT] Biome"
+			},
+			"Terrain-cb8bcdfe-d156-4e7c-b957-1d7f1b719565":	{
+				"$Position":	{
+					"$x":	-3248,
+					"$y":	-5006
+				}
+			},
+			"ConstantDensityNode-0f803191-a321-4ce0-9f4e-ecc4c0488376":	{
+				"$Position":	{
+					"$x":	-3069,
+					"$y":	-4993
+				}
+			},
+			"ConstantMaterialProvider-58ef2433-f671-4685-8c4e-4c2de15a6fd8":	{
+				"$Position":	{
+					"$x":	-3332,
+					"$y":	-4149
+				}
+			},
+			"Material-c2018a77-a350-4e97-ad56-50f2073b1b92":	{
+				"$Position":	{
+					"$x":	-2636,
+					"$y":	-4120
+				}
+			},
+			"Constant.TintProvider-52e0101a-b2a5-4bd4-9aed-640a417f04d5":	{
+				"$Position":	{
+					"$x":	-3562,
+					"$y":	-3772
+				}
+			}
+		},
+		"$FloatingNodes":	[],
+		"$Links":	{
+		},
+		"$Groups":	[],
+		"$Comments":	[],
+		"$WorkspaceID":	"HytaleGenerator - Biome"
+	}
+}
