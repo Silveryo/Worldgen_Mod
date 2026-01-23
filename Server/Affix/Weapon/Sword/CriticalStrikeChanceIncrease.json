@@ -1,0 +1,97 @@
+{
+  "group_name": "CriticalStrikeChanceIncrease",
+  "type": "Suffix",
+  "tiers": [
+    {
+      "name": "of Heat Death",
+      "tier": 0,
+      "ilvl": 86,
+      "weight": 50,
+      "stats": [
+        {
+          "stat_id": "local_critical_strike_chance_+%",
+          "min": 5.01,
+          "max": 5.50
+        }
+      ]
+    },
+    {
+      "name": "of Erasure",
+      "tier": 1,
+      "ilvl": 73,
+      "weight": 125,
+      "stats": [
+        {
+          "stat_id": "local_critical_strike_chance_+%",
+          "min": 4.41,
+          "max": 5.00
+        }
+      ]
+    },
+    {
+      "name": "of Collapse",
+      "tier": 2,
+      "ilvl": 59,
+      "weight": 250,
+      "stats": [
+        {
+          "stat_id": "local_critical_strike_chance_+%",
+          "min": 3.81,
+          "max": 4.40
+        }
+      ]
+    },
+    {
+      "name": "of Calamity",
+      "tier": 3,
+      "ilvl": 44,
+      "weight": 500,
+      "stats": [
+        {
+          "stat_id": "local_critical_strike_chance_+%",
+          "min": 3.11,
+          "max": 3.80
+        }
+      ]
+    },
+    {
+      "name": "of Disaster",
+      "tier": 4,
+      "ilvl": 30,
+      "weight": 1000,
+      "stats": [
+        {
+          "stat_id": "local_critical_strike_chance_+%",
+          "min": 2.11,
+          "max": 2.70
+        }
+      ]
+    },
+    {
+      "name": "of Mess",
+      "tier": 5,
+      "ilvl": 20,
+      "weight": 1000,
+      "stats": [
+        {
+          "stat_id": "local_critical_strike_chance_+%",
+          "min": 1.51,
+          "max": 2.10
+        }
+      ]
+    },
+    {
+      "name": "of Bother",
+      "tier": 6,
+      "ilvl": 1,
+      "weight": 1000,
+      "stats": [
+        {
+          "stat_id": "local_critical_strike_chance_+%",
+          "min": 1.01,
+          "max": 1.50
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "MonsterID": "Rare_Skeleton",
+  "Rarity": "Rare",
+  "ModCount": 3,
+  "Mods": [
+     "MonsterHasted",         // Token 1: Sets Speed * 1.4
+     "MonsterChaosResist",    // Token 2: Sets Chaos Res = 50%
+     "MonsterFireDamage"      // Token 3: Adds Fire Damage
+  ],
+  "HiddenStats": {
+     "ItemRarity": "+200%",   // Calculated based on ModCount = 3
+     "ItemQuantity": "+30%"    // Calculated based on ModCount = 3
+  }
+}

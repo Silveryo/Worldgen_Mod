@@ -23,7 +23,7 @@
 	"TintProvider":	{
 		"$NodeId":	"Constant.TintProvider-52e0101a-b2a5-4bd4-9aed-640a417f04d5",
 		"Type":	"Constant",
-		"Color":	"#008000"
+		"Color":	"#00000000"
 	},
 	"$NodeEditorMetadata":	{
 		"$Nodes":	{

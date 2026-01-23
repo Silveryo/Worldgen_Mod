@@ -1,0 +1,116 @@
+{
+  "system_version": "1.0",
+  "definitions": {
+    "stat_logic": "multiplicative", // "base_stats * (1 + mod_value)"
+    // "stat_logic": "additive", // "base_stats + mod_value"
+    "notes": "Cost represents the 'difficulty budget' this mod consumes."
+  },
+  "affixes": [
+    // --- OFFENSIVE MODS ---
+    {
+      "id": "mod_savage",
+      "display_name": "Savage",
+      "category": "offensive",
+      "difficulty_cost": 1,
+      "tags": ["physical", "melee_buff"],
+      "conflicts_with": ["mod_timid"],
+      "stats": {
+        "damage_output_multiplier": 0.30,   // +30% Damage
+        "attack_speed_multiplier": 0.10     // +10% Attack Speed
+      },
+      "visual_hint": {
+        "tint_color": "#FF4444", // Red tint
+        "scale_modifier": 1.1    // 10% larger model
+      }
+    },
+    {
+      "id": "mod_berserker",
+      "display_name": "Berserker",
+      "category": "offensive",
+      "difficulty_cost": 2, // More expensive/dangerous
+      "tags": ["high_risk", "aggro"],
+      "conflicts_with": ["mod_tank"],
+      "stats": {
+        "damage_output_multiplier": 1.0,    // +100% Damage (Double)
+        "movement_speed_multiplier": 0.20,  // +20% Move Speed
+        "damage_received_multiplier": 0.50  // Takes 50% MORE damage (Glass cannon)
+      },
+      // this is something that needs integration with Hytale's systems... but they have it.
+      "ai_behavior": {
+        "aggro_range_multiplier": 2.0, // Sees player from further away
+        "flee_threshold": 0.0          // Never runs away
+      }
+    },
+
+    // --- DEFENSIVE MODS ---
+    {
+      "id": "mod_iron_skin",
+      "display_name": "Iron-Skinned",
+      "category": "defensive",
+      "difficulty_cost": 1,
+      "tags": ["tank", "physical_resist"],
+      "conflicts_with": ["mod_ethereal"],
+      "stats": {
+        "health_max_multiplier": 0.50,      // +50% HP
+        "defense_armor_flat": 100           // Flat armor bonus (rare exception to %)
+      },
+      "visual_hint": {
+        "texture_overlay": "metallic_sheen",
+        "sound_on_hit": "metal_clank"
+      }
+    },
+    {
+      "id": "mod_regenerator",
+      "display_name": "Regenerating",
+      "category": "sustain",
+      "difficulty_cost": 2,
+      "tags": ["healing", "annoying"],
+      "conflicts_with": ["mod_undead"],
+      "stats": {
+        "health_regen_percent_per_sec": 0.05 // Regenerates 5% Max HP per second
+      },
+      "visual_hint": {
+        "particle_effect": "green_plus_signs"
+      }
+    },
+
+    // --- UTILITY / ELEMENTAL MODS ---
+    {
+      "id": "mod_swift",
+      "display_name": "Swift",
+      "category": "utility",
+      "difficulty_cost": 1,
+      "tags": ["speed"],
+      "conflicts_with": ["mod_sluggish", "mod_colossal"],
+      "stats": {
+        "movement_speed_multiplier": 0.40,  // +40% Speed
+        "animation_speed_multiplier": 0.20  // Animations play faster
+      },
+      "visual_hint": {
+        "trail_effect": "blur_motion"
+      }
+    },
+    {
+      "id": "mod_frost_aura",
+      "display_name": "Frozen",
+      "category": "elemental",
+      "difficulty_cost": 3,
+      "tags": ["ice", "area_denial"],
+      "conflicts_with": ["mod_fire_aura", "mod_lightning_aura"],
+      "stats": {
+        "resistance_ice": 0.75, // 75% Resistance to Ice
+        "resistance_fire": -0.50 // Weak to Fire (-50%)
+      },
+      "special_mechanic": {
+        "trigger": "on_tick_1s", // Every 1 second
+        "effect": "aoe_slow",
+        "radius": 5.0,
+        "value": 0.30 // 30% Slow in radius
+      },
+      "visual_hint": {
+        "ground_decal": "ice_patch",
+        "tint_color": "#00FFFF"
+      }
+    }
+  ]
+}

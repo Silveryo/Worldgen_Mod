@@ -1,0 +1,97 @@
+{
+  "group_name": "CriticalStrikeMultiplier",
+  "type": "Suffix",
+  "tiers": [
+    {
+      "name": "of The Supernova",
+      "tier": 0,
+      "ilvl": 86,
+      "weight": 50,
+      "stats": [
+        {
+          "stat_id": "local_critical_strike_multiplier_+%",
+          "min": 26,
+          "max": 29
+        }
+      ]
+    },
+    {
+      "name": "of Obliteration",
+      "tier": 1,
+      "ilvl": 73,
+      "weight": 125,
+      "stats": [
+        {
+          "stat_id": "local_critical_strike_multiplier_+%",
+          "min": 23,
+          "max": 25
+        }
+      ]
+    },
+    {
+      "name": "of Savagery",
+      "tier": 2,
+      "ilvl": 59,
+      "weight": 250,
+      "stats": [
+        {
+          "stat_id": "local_critical_strike_multiplier_+%",
+          "min": 20,
+          "max": 22
+        }
+      ]
+    },
+    {
+      "name": "of Fury",
+      "tier": 3,
+      "ilvl": 44,
+      "weight": 500,
+      "stats": [
+        {
+          "stat_id": "local_critical_strike_multiplier_+%",
+          "min": 17,
+          "max": 19
+        }
+      ]
+    },
+    {
+      "name": "of Rage",
+      "tier": 4,
+      "ilvl": 30,
+      "weight": 1000,
+      "stats": [
+        {
+          "stat_id": "local_critical_strike_multiplier_+%",
+          "min": 14,
+          "max": 16
+        }
+      ]
+    },
+    {
+      "name": "of Irritation",
+      "tier": 5,
+      "ilvl": 21,
+      "weight": 1000,
+      "stats": [
+        {
+          "stat_id": "local_critical_strike_multiplier_+%",
+          "min": 12,
+          "max": 13
+        }
+      ]
+    },
+    {
+      "name": "of Grumpiness",
+      "tier": 6,
+      "ilvl": 8,
+      "weight": 1000,
+      "stats": [
+        {
+          "stat_id": "local_critical_strike_multiplier_+%",
+          "min": 10,
+          "max": 11
+        }
+      ]
+    }
+  ]
+}
